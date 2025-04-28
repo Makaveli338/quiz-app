@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <form onsubmit="handleSubmit()"  class=" p-10 mx-auto grid justify-items-center ">
+
+
+        <div class="w-[60%]" id="Q1">
+            <h1 class=" text-2xl font-bold">
+                1. Which is the largest planet in the solar system?
+            </h1>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="uranus" name="planet" value="uranus">
+            <label for="uranus">Uranus</label><br>
+            </div>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="earth" name="planet" value="earth">
+            <label for="earth">Earth</label><br>
+            </div>
+
+            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="jupiter" name="planet" value="jupiter"> 
+            <label for="jupiter">Jupiter</label>
+            </div>
+        </div>
+
+        <div class="w-[60%] mt-8 hidden" id="Q2">
+            <h1 class=" text-2xl font-bold">
+                2. Which is the most famous car brand?
+            </h1>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="uranus" name="car" value="toyota">
+            <label for="uranus">Toyota</label><br>
+            </div>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="earth" name="car" value="subaru">
+            <label for="earth">Subaru</label><br>
+            </div>
+
+            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="jupiter" name="car" value="mercedes"> 
+            <label for="jupiter">Mercedes</label>
+            </div>
+        </div>
+        
+
+        <div class="w-[60%] mt-8 hidden" id="Q3">
+            <h1 class=" text-2xl font-bold">
+                3. Which country invented tea?
+            </h1>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="kenya" name="country" value="kenya">
+            <label for="kenya">Kenya</label><br>
+            </div>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="india" name="country" value="india">
+            <label for="india">India</label><br>
+            </div>
+
+            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="china" name="country" value="china"> 
+            <label for="china">China</label>
+            </div>
+        </div>
+
+        <div class="w-[60%] mt-8 hidden" id="Q4">
+            <h1 class=" text-2xl font-bold">
+                4. What gas do plants absorb from the atmosphere?
+            </h1>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="hydrogen" name="gas" value="hydrogen">
+            <label for="hydrogen">Hydrogen</label><br>
+            </div>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="oxygen" name="gas" value="oxygen">
+            <label for="oxygen">Oxygen</label><br>
+            </div>
+
+            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="carbondioxide" name="gas" value="carbondioxide"> 
+            <label for="carbondioxide">Carbon dioxide</label>
+            </div>
+        </div>
+
+        <div class="w-[60%] mt-8 hidden" id="Q5">
+            <h1 class=" text-2xl font-bold">
+                5. Who was the first president of United States?
+            </h1>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="george" name="president" value="george">
+            <label for="george">George Washington</label><br>
+            </div>
+
+            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="abraham" name="president" value="abraham">
+            <label for="abraham">Abraham Lincon</label><br>
+            </div>
+
+            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="thomas" name="president" value="thomas"> 
+            <label for="thomas">Thomas Jefferson</label>
+            </div>
+
+        </div>
+        <button type="submit" id="submit" class="">
+            submit
+        </button>
+
+
+
+
+    </form>
+
+    <script>
+        const Q1 = document.getElementById('Q1');
+        const Q2 = document.getElementById('Q2');
+        const Q3 = document.getElementById('Q3');
+        const Q4 = document.getElementById('Q4');
+        const Q5 = document.getElementById('Q5');
+
+        const Q1Inputs = Q1.querySelectorAll('input[type="radio"]');
+        const Q2Inputs = Q2.querySelectorAll('input[type="radio"]');
+        const Q3Inputs = Q3.querySelectorAll('input[type="radio"]');
+        const Q4Inputs = Q4.querySelectorAll('input[type="radio"]');
+        const Q5Inputs = Q5.querySelectorAll('input[type="radio"]');
+
+        Q1Inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.checked) {
+                    Q2.classList.remove('hidden');              
+              }
+            });
+        });
+
+        Q2Inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.checked) {
+                    Q3.classList.remove('hidden');
+              }
+            });
+        });
+
+        Q3Inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.checked) {
+                    Q4.classList.remove('hidden');
+              }
+            });
+        });
+
+        Q4Inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.checked) {
+                    Q5.classList.remove('hidden');
+              }
+            });
+        });
+
+        function handleSubmit() {
+        
+           
+            const selectedAnswers = {
+                planet: Q1.querySelector('input[name="planet"]:checked')?.value,
+                car: Q2.querySelector('input[name="car"]:checked')?.value,
+                country: Q3.querySelector('input[name="country"]:checked')?.value,
+                gas: Q4.querySelector('input[name="gas"]:checked')?.value,
+                president: Q5.querySelector('input[name="president"]:checked')?.value
+            };
+
+            console.log(selectedAnswers);
+        }
+
+    </script>
+    
+</body>
+</html>
