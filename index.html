@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form onsubmit="handleSubmit()"  class=" p-10 mx-auto grid justify-items-center ">
+    <form onsubmit="handleSubmit(event)"  class=" p-10 mx-auto grid justify-items-center ">
 
 
         <div class="w-[60%]" id="Q1">
@@ -16,17 +16,17 @@
                 1. Which is the largest planet in the solar system?
             </h1>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="uranus" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input  type="radio" id="uranus" name="planet" value="uranus">
             <label for="uranus">Uranus</label><br>
             </div>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="earth" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="earth" name="planet" value="earth">
             <label for="earth">Earth</label><br>
             </div>
 
-            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="jupiter" class="mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="jupiter" name="planet" value="jupiter"> 
             <label for="jupiter">Jupiter</label>
             </div>
@@ -37,19 +37,19 @@
                 2. Which is the most famous car brand?
             </h1>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
-            <input  type="radio" id="uranus" name="car" value="toyota">
-            <label for="uranus">Toyota</label><br>
+            <div id="toyota" class=" mt-4 w-full h-[50px] rounded-xl border bg-blue-300 px-6 flex items-center gap-4">
+            <input  type="radio" id="toyota" name="car" value="toyota">
+            <label for="toyota">Toyota</label><br>
             </div>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
-            <input type="radio" id="earth" name="car" value="subaru">
-            <label for="earth">Subaru</label><br>
+            <div id="subaru" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="subaru" name="car" value="subaru">
+            <label for="subaru">Subaru</label><br>
             </div>
 
-            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
-            <input type="radio" id="jupiter" name="car" value="mercedes"> 
-            <label for="jupiter">Mercedes</label>
+            <div id="mercedes" class="mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
+            <input type="radio" id="mercedes" name="car" value="mercedes"> 
+            <label for="mercedes">Mercedes</label>
             </div>
         </div>
         
@@ -59,17 +59,17 @@
                 3. Which country invented tea?
             </h1>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="kenya" class=" mt-4 w-full h-[50px] rounded-xl border bg-blue-300 px-6 flex items-center gap-4">
             <input  type="radio" id="kenya" name="country" value="kenya">
             <label for="kenya">Kenya</label><br>
             </div>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="india" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="india" name="country" value="india">
             <label for="india">India</label><br>
             </div>
 
-            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="china" class="mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="china" name="country" value="china"> 
             <label for="china">China</label>
             </div>
@@ -80,17 +80,17 @@
                 4. What gas do plants absorb from the atmosphere?
             </h1>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="hydrogen" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input  type="radio" id="hydrogen" name="gas" value="hydrogen">
             <label for="hydrogen">Hydrogen</label><br>
             </div>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="oxygen" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="oxygen" name="gas" value="oxygen">
             <label for="oxygen">Oxygen</label><br>
             </div>
 
-            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="carbondioxide" class="mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="carbondioxide" name="gas" value="carbondioxide"> 
             <label for="carbondioxide">Carbon dioxide</label>
             </div>
@@ -101,23 +101,23 @@
                 5. Who was the first president of United States?
             </h1>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="george" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input  type="radio" id="george" name="president" value="george">
             <label for="george">George Washington</label><br>
             </div>
 
-            <div class=" mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="abraham" class=" mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="abraham" name="president" value="abraham">
             <label for="abraham">Abraham Lincon</label><br>
             </div>
 
-            <div class="mt-4 w-full h-[50px] border bg-blue-300 px-6 flex items-center gap-4">
+            <div id="thomas" class="mt-4 w-full h-[50px] border rounded-xl bg-blue-300 px-6 flex items-center gap-4">
             <input type="radio" id="thomas" name="president" value="thomas"> 
             <label for="thomas">Thomas Jefferson</label>
             </div>
 
         </div>
-        <button type="submit" id="submit" class="">
+        <button type="submit" id="submit" class=" border ml-[54%] rounded-xl bg-green-300 px-5 py-2 mt-8 cursor-pointer">
             submit
         </button>
 
@@ -171,18 +171,89 @@
             });
         });
 
-        function handleSubmit() {
-        
-           
-            const selectedAnswers = {
-                planet: Q1.querySelector('input[name="planet"]:checked')?.value,
-                car: Q2.querySelector('input[name="car"]:checked')?.value,
-                country: Q3.querySelector('input[name="country"]:checked')?.value,
-                gas: Q4.querySelector('input[name="gas"]:checked')?.value,
-                president: Q5.querySelector('input[name="president"]:checked')?.value
-            };
+        function handleSubmit(event) {
+               event.preventDefault(); // Prevent the default form submission    
+               let planet = Q1.querySelector('input[name="planet"]:checked')?.value
+               let car = Q2.querySelector('input[name="car"]:checked')?.value
+               let country = Q3.querySelector('input[name="country"]:checked')?.value
+               let gas = Q4.querySelector('input[name="gas"]:checked')?.value
+               let president = Q5.querySelector('input[name="president"]:checked')?.value
 
-            console.log(selectedAnswers);
+               let correctScore = 0
+               let incorrectScore = 0
+
+               document.getElementById("jupiter").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-green-300 px-6 flex items-center gap-4' )
+               document.getElementById("earth").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("uranus").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("toyota").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-green-300 px-6 flex items-center gap-4' )
+               document.getElementById("subaru").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("mercedes").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("china").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-green-300 px-6 flex items-center gap-4' )
+               document.getElementById("kenya").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("india").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("carbondioxide").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-green-300 px-6 flex items-center gap-4' )
+               document.getElementById("oxygen").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("hydrogen").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("george").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-green-300 px-6 flex items-center gap-4' )
+               document.getElementById("abraham").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+               document.getElementById("thomas").setAttribute('class' , 'mt-4 w-full h-[50px] border rounded-xl bg-red-300 px-6 flex items-center gap-4' )
+
+                
+                console.log(planet, car, country, gas, president)   
+                if (planet === "jupiter") {
+                 correctScore += 1
+                } else {
+                 incorrectScore += 1              
+                }
+                
+                if (car === "toyota") {
+                 correctScore += 1
+
+                } else {
+                 incorrectScore += 1
+               
+                }
+
+                if (country === "china") {
+                 correctScore += 1
+
+                } else {
+                 incorrectScore += 1
+                 
+
+                }
+
+                if (gas === "carbondioxide") {
+                 correctScore += 1
+
+                } else {
+                 incorrectScore += 1
+         
+
+                }
+
+                if (president === "george") {
+                 correctScore += 1
+
+                } else {
+                 incorrectScore += 1
+     
+
+                }
+
+                return alert('Your score is ' + correctScore + '/5' )
+
+
+
+                             
+            //   const selectedAnswers = {
+            //     planet: Q1.querySelector('input[name="planet"]:checked')?.value,
+            //     car: Q2.querySelector('input[name="car"]:checked')?.value,
+            //     country: Q3.querySelector('input[name="country"]:checked')?.value,
+            //     gas: Q4.querySelector('input[name="gas"]:checked')?.value,
+            //     president: Q5.querySelector('input[name="president"]:checked')?.value
+            // };
+
         }
 
     </script>
